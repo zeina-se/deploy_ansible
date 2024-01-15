@@ -5,10 +5,10 @@
       apt:
         name: apache2
         state: present
-    - name: Copy website files
+    - name: Copy index.html file
       copy:
-        src: /path/to/your/website/files
-        dest: /var/www/html
+        src: index.html
+        dest: C:\Users\Admin\Desktop\DevOps\deploy_ansible\index.html
     - name: Restart Apache
       service:
         name: apache2
