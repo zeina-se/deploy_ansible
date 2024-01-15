@@ -1,0 +1,15 @@
+---
+- hosts: webservers
+  tasks:
+    - name: Install Apache web server
+      apt:
+        name: apache2
+        state: present
+    - name: Copy website files
+      copy:
+        src: /path/to/your/website/files
+        dest: /var/www/html
+    - name: Restart Apache
+      service:
+        name: apache2
+        state: restarted
